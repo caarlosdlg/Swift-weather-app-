@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SwiftAppClimaApiJSONApp: App {
+    @StateObject private var weatherViewModel = WeatherViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(weatherViewModel)
         }
     }
 }
